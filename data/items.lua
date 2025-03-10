@@ -187,12 +187,12 @@ return {
 		}
 	},
 
-	['radio'] = {
-		label = 'Radio',
-		weight = 1000,
-		stack = false,
-		allowArmed = true
-	},
+	-- ['radio'] = {
+	-- 	label = 'Radio',
+	-- 	weight = 1000,
+	-- 	stack = false,
+	-- 	allowArmed = true
+	-- },
 
 	['armour'] = {
 		label = 'Bulletproof Vest',
@@ -740,16 +740,16 @@ return {
 		}
 	},
 
-	["harness"] = {
-		label = "Race Harness",
-		weight = 1000,
-		stack = false,
-		close = true,
-		description = "Racing Harness so no matter what you stay in the car",
-		client = {
-			image = "harness.png",
-		}
-	},
+	-- ["harness"] = {
+	-- 	label = "Race Harness",
+	-- 	weight = 1000,
+	-- 	stack = false,
+	-- 	close = true,
+	-- 	description = "Racing Harness so no matter what you stay in the car",
+	-- 	client = {
+	-- 		image = "harness.png",
+	-- 	}
+	-- },
 
 	["tunerlaptop"] = {
 		label = "Tunerchip",
@@ -1686,16 +1686,16 @@ return {
 		}
 	},
 
-	["jerry_can"] = {
-		label = "Jerrycan 20L",
-		weight = 20000,
-		stack = true,
-		close = true,
-		description = "A can full of Fuel",
-		client = {
-			image = "jerry_can.png",
-		}
-	},
+	-- ["jerry_can"] = {
+	-- 	label = "Jerrycan 20L",
+	-- 	weight = 20000,
+	-- 	stack = true,
+	-- 	close = true,
+	-- 	description = "A can full of Fuel",
+	-- 	client = {
+	-- 		image = "jerry_can.png",
+	-- 	}
+	-- },
 
 	["advancedrepairkit"] = {
 		label = "Advanced Repairkit",
@@ -2002,6 +2002,112 @@ return {
 		description = "The real deal...",
 		client = {
 			image = "drill.png",
+		}
+	},
+
+	["removal_tool"] = {
+		label = "Removal Tool",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "A Harness Removal Tool",
+		client = {
+			image = "screwdriverset.png",
+		}
+	},
+
+	["harness"] = {
+		label = "Race Harness",
+		weight = 1000,
+		stack = false,
+		close = true,
+		description = "Racing Harness so no matter what you stay in the car!",
+		client = {
+			image = "harness.png",
+		}
+	},
+
+	["energy_drink"] = {
+        label = "Junk",
+        weight = 350,
+        client = {
+            image = 'junk.png',
+            status = { thrist = 200000, stress = -200000 },
+            anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+            prop = { model = `sf_p_sf_grass_gls_s_01a`, pos = vec3(0.0, 0.0, -0.09), rot = vec3(0.0, 0.0, 0.0) },
+            usetime = 5000,
+            notification = 'You quenched your thirst with a junk!'
+        }
+    },
+
+	["notepad"] = {
+		label = "Notepad",
+		weight = 0,
+		stack = false,
+		close = true,
+		consume = 0,
+		description = "Sometimes handy to remember something :)",
+		server = {
+			export = 'randol_notes.notepad',
+		},
+	},
+
+	["tornnote"] = {
+		label = "Torn Note",
+		weight = 0,
+		stack = false,
+		close = false,
+	},
+
+
+	["syphoningkit"] = {
+		label = "Syphoning Kit",
+		weight = 5000,
+		stack = false,
+		close = false,
+		description = "A kit made to siphon gasoline from vehicles.",
+		client = {
+			image = "syphoningkit.png",
+		}
+	},
+
+	["jerrycan"] = {
+		label = "Jerry Can",
+		weight = 15000,
+		stack = false,
+		close = false,
+		description = "A Jerry Can made to hold gasoline.",
+		client = {
+			image = "jerrycan.png",
+		}
+	},
+
+	['radio'] = {
+		label = 'Radio',
+		weight = 1000,
+		allowArmed = true,
+		consume = 0,
+		client = {
+			event = 'mm_radio:client:use'
+		}
+	},
+
+	['jammer'] = {
+		label = 'Radio Jammer',
+		weight = 10000,
+		allowArmed = true,
+		client = {
+			event = 'mm_radio:client:usejammer'
+		}
+	},
+
+	['radiocell'] = {
+		label = 'AAA Cells',
+		weight = 1000,
+		stack = true,
+		allowArmed = true,
+		client = {
+			event = 'mm_radio:client:recharge'
 		}
 	},
 }

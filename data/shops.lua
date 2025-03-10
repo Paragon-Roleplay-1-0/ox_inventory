@@ -4,9 +4,24 @@ return {
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'burger', price = 10 },
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			-- OX Defaults
+			{ name = 'burger', price = 10, count = 50 },
+			{ name = 'water',  price = 10, count = 50 },
+			{ name = 'sprunk', price = 10, count = 50 },
+
+			-- QB Defaults
+			{ name = 'tosti',         price = 12, count = 50 },
+			{ name = 'coffee', 		  price = 12, count = 50 },
+			{ name = 'kurkakola',     price = 12, count = 50 },
+			{ name = 'twerks_candy',  price = 12, count = 50 },
+			{ name = 'snikkel_candy', price = 12, count = 50 },
+			{ name = 'sandwich',      price = 12, count = 50 },
+			{ name = 'grapejuice',    price = 15, count = 50 },
+			{ name = 'lighter',       price = 12, count = 50 },
+			{ name = 'rolling_paper', price = 12, count = 5000 },
+
+			-- New
+			{ name = 'energy_drink',  price = 12, count = 50 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -37,9 +52,15 @@ return {
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-			{ name = 'burger', price = 15 },
+			{ name = 'water',        price = 10, count = 50 },
+			{ name = 'sprunk',       price = 10, count = 50 },
+			{ name = 'kurkakola',    price = 12, count = 50 },
+			{ name = 'energy_drink', price = 12, count = 50 },
+			{ name = 'beer',         price = 20, count = 50 },
+			{ name = 'whiskey',      price = 25, count = 50 },
+			{ name = 'vodka',        price = 30, count = 50 },
+			{ name = 'wine',         price = 35, count = 50 },
+			{ name = 'grapejuice',   price = 50, count = 50 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -63,12 +84,35 @@ return {
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'lockpick', price = 10 }
+			{ name = 'lockpick',       price = 10,  count = 50 },
+			{ name = 'WEAPON_WRENCH',  price = 250, count = 250 },
+			{ name = 'WEAPON_HAMMER',  price = 250, count = 250 },
+			{ name = 'WEAPON_CROWBAR', price = 250, count = 250 },
+			{ name = 'pickaxe',        price = 200, count = 250 },
+			{ name = 'screwdriverset', price = 350, count = 50 },
+			{ name = 'firework1',      price = 50,  count = 50 },
+			{ name = 'firework2',      price = 50,  count = 50 },
+			{ name = 'firework3',      price = 50,  count = 50 },
+			{ name = 'firework4',      price = 50,  count = 50 },
+			{ name = 'cleaningkit',    price = 150, count = 150 },
+			{ name = 'jerrycan',       price = 200, count = 50 },
+			-- { name = 'bleachwipes',    price = 150, count = 50 }, -- Wasabi Evidence
+			{ name = 'notepad',        price = 20,  count = 50 },
+			-- { name = 'harness', 	   price = 500, count = 50 }, -- See Mech Shop
+			{ name = 'removal_tool',   price = 350, count = 50 },
+
+			-- R14 - Evidence
+			-- { name = 'blox',            price = 200, count = 50 },
+			-- { name = 'microfibercloth', price = 100, count = 50 },
 		}, locations = {
 			vec3(2748.0, 3473.0, 55.67),
-			vec3(342.99, -1298.26, 32.51)
+			-- vec3(342.99, -1298.26, 32.51),
+			vector3(45.68, -1749.04, 29.61),
+			vector3(-421.83, 6136.13, 31.88),
 		}, targets = {
-			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 }
+			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 },
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vector3(45.68, -1749.04, 28.61), heading = 53.13 },
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vector3(-421.83, 6136.13, 30.88), heading = 228.2 },
 		}
 	},
 
@@ -77,10 +121,14 @@ return {
 		blip = {
 			id = 110, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
+			{ name = 'ammo-9',               price = 15,    count = 250 },
+			{ name = 'ammo-45',				 price = 15, 	count = 250 },
+			{ name = 'WEAPON_KNIFE',         price = 200,   count = 250 },
+			{ name = 'WEAPON_BAT',           price = 100,   count = 250 },
+			{ name = 'WEAPON_HATCHET',       price = 250,   count = 250 },
+			{ name = 'WEAPON_PISTOL',        price = 1000,  count = 5, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_SNSPISTOL',     price = 750,   count = 5, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_VINTAGEPISTOL', price = 4000,  count = 5, metadata = { registered = true }, license = 'weapon' },
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -105,22 +153,75 @@ return {
 	},
 
 	PoliceArmoury = {
-		name = 'Police Armoury',
-		groups = shared.police,
+		name = 'DPS Armoury',
+		-- groups = shared.police,
+		groups = {
+			["police"] = 0,
+			["lssd"] = 0,
+			["sasp"] = 0,
+		},
 		blip = {
-			id = 110, colour = 84, scale = 0.8
+			id = 110, colour = 38, scale = 0.9 -- colour = 47 (LSCSO)
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+			{ name = 'ammo-9',            price = 5, count = 500 },
+			{ name = 'ammo-rifle',        price = 5, count = 500 },
+			{ name = 'ammo-shotgun',      price = 5, count = 500 },
+			{ name = 'ammo-44', 		  price = 5, count = 500, grade = 10 },
+			{ name = 'at_flashlight',     price = 5, count = 500 },
+			{ name = 'WEAPON_FLASHLIGHT', price = 200, count = 500 },
+			{ name = 'WEAPON_NIGHTSTICK', price = 100, count = 500 },
+			{ name = 'WEAPON_PISTOL_MK2',       price = 500,  count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 0 }, -- ammo-9 -- WEAPON_PISTOL_MK2
+			{ name = 'WEAPON_COMBATPISTOL',     price = 500,  count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 2 }, -- ammo-9
+			{ name = 'WEAPON_GLOCK20',          price = 500,  count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5 }, -- ammo-9
+			{ name = 'WEAPON_REVOLVER_MK2',     price = 1000, count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 10 },
+			{ name = 'WEAPON_STUNGUN',          price = 500,  count = 500, metadata = { registered = true, serial = 'POL' } },
+			{ name = 'WEAPON_PUMPSHOTGUN_MK2',  price = 1000, count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 2 }, -- ammo-shotgun -- WEAPON_PUMPSHOTGUN_MK2
+			{ name = 'WEAPON_SMG_MK2',          price = 1000, count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5 }, -- ammo-9 -- WEAPON_SMG_MK2
+			{ name = 'WEAPON_CARBINERIFLE_MK2', price = 1000, count = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 2 }, -- ammo-rifle -- WEAPON_CARBINERIFLE_MK2
+			{ name = 'badge',                   price = 100, count = 500 }, -- LSPD
+			{ name = 'sdbadge',                 price = 100, count = 500 }, -- LSCSO
+			{ name = 'stbadge',                 price = 100, count = 500 }, -- SAST
+			{ name = 'handcuffs',           price = 5,   count = 500 },
+			{ name = 'empty_evidence_bag',  price = 5,   count = 500 },
+			{ name = 'police_stormram',     price = 5,   count = 500 },
+			{ name = 'radio',               price = 5,   count = 500 },
+			{ name = 'radiocell', 			price = 5, 	 count = 500 },
+			{ name = 'heavyarmor',          price = 5,   count = 500 },
+			{ name = 'repair_kit', 			price = 250, count = 500 },
+			{ name = 'advancedrepairkit',   price = 500, count = 500, grade = 5},
+			{ name = 'cleaning_kit',        price = 5,   count = 500 },
+			{ name = 'bandage',				price = 5,   count = 500 },
+			{ name = 'jammer', 				price = 500, count = 500 },
+			{ name = 'uvlight', 			price = 5,   count = 500 },
+			{ name = 'bleachwipes',         price = 5,   count = 500 },
+			{ name = 'notepad',             price = 100, count = 500 },
+
+			-- R14 - Evidence
+			-- { name = 'nikon',             price = 1000, count = 500 },
+			-- { name = 'sdcard',            price = 5,    count = 500 },
+			-- { name = 'gsrtestkit',        price = 5,    count = 500 },
+			-- { name = 'dnatestkit',        price = 5,    count = 500 },
+			-- { name = 'drugtestkit',       price = 5,    count = 500 },
+			-- { name = 'breathalyzer',      price = 100,  count = 500 },
+			-- { name = 'fingerprintreader', price = 100,  count = 500 },
+			-- { name = 'accesstool',        price = 200,  count = 500 },
+			-- { name = 'fingerprintkit',    price = 5,    count = 500 },
+			-- { name = 'mikrosil',          price = 5,    count = 500 },
+			-- { name = 'fingerprinttape',   price = 5,    count = 500 },
+
 		}, locations = {
-			vec3(451.51, -979.44, 30.68)
+			-- MRPD
+			vector3(455.12, -999.77, 30.71), -- vector4(455.12, -999.77, 30.71, 357.18)
+
+			-- DPPD
+			vector3(-601.1, -412.97, 35.17), -- vector4(-601.1, -412.97, 35.17, 270.62)
+
+			-- LSCSO
+			vector3(1818.94, 3666.93, 30.31), -- vector4(1818.94, 3666.93, 30.31, 120.25)
 		}, targets = {
-			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
+			{ ped = `s_m_y_cop_01`, scenario = 'WORLD_HUMAN_COP_IDLES', loc = vector3(455.12, -999.77, 29.71), heading = 357.18 }, -- MRPD
+			{ ped = `s_f_y_cop_01`, scenario = 'WORLD_HUMAN_COP_IDLES', loc = vector3(-601.1, -412.97, 34.17), heading = 270.62 }, -- DPPD
+			{ ped = `s_f_y_sheriff_01`, scenario = 'WORLD_HUMAN_COP_IDLES', loc = vector3(1818.94, 3666.93, 29.31), heading = 120.25 }, -- LSCSO
 		}
 	},
 
@@ -130,14 +231,28 @@ return {
 			['ambulance'] = 0
 		},
 		blip = {
-			id = 403, colour = 69, scale = 0.8
+			id = 403, colour = 69, scale = 0.9
 		}, inventory = {
-			{ name = 'medikit', price = 26 },
-			{ name = 'bandage', price = 5 }
+			{ name = 'emsbadge',                price = 100, count = 500 },
+			{ name = 'notepad', 				price = 5,   count = 500 },
+			{ name = 'radio',                   price = 5,   count = 500 },
+			{ name = 'radiocell',               price = 5,   count = 500 },
+			{ name = 'medikit',                 price = 26,  count = 500 },
+			{ name = 'bandage',                 price = 5,   count = 500 },
+			{ name = 'WEAPON_FLASHLIGHT',       price = 5,   count = 500 },
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 5,   count = 500 },
 		}, locations = {
-			vec3(306.3687, -601.5139, 43.28406)
-		}, targets = {
+			-- Pillbox
+			-- vec3(306.3687, -601.5139, 43.28406),
 
+			-- MZMC
+			-- vector3(-460.13, -312.39, 34.91),
+
+			-- SSC
+			-- vector3(1651.28, 3658.62, 35.34),
+		}, targets = {
+			-- { ped = `s_f_y_factory_01`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(-460.13, -312.39, 33.91), heading = 293.15 },
+			-- { ped = `s_m_m_scientist_01`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(1651.28, 3658.62, 34.34), heading = 31.23 },
 		}
 	},
 
@@ -156,14 +271,284 @@ return {
 		}
 	},
 
+	BlackMarket = {
+		name = 'Black Market',
+		blip = {
+			id = 186,
+			colour = 79,
+			scale = 0.9
+		},
+		inventory = {
+			{ name = 'security_card_01',  price = 5000, count = 50 },
+			{ name = 'security_card_02',  price = 5000, count = 50 },
+			{ name = 'advancedlockpick',  price = 5000, count = 50 },
+			{ name = 'electronickit',     price = 5000, count = 50 },
+			{ name = 'gatecrack',         price = 5000, count = 50 },
+			{ name = 'thermite',          price = 5000, count = 50 },
+			{ name = 'trojan_usb',        price = 5000, count = 50 },
+			{ name = 'drill',             price = 5000, count = 50 },
+			{ name = 'radioscanner',      price = 5000, count = 50 },
+			{ name = 'cryptostick',       price = 5000, count = 50 },
+			{ name = 'joint',             price = 5000, count = 50 },
+			{ name = 'cokebaggy',         price = 5000, count = 50 },
+			{ name = 'crack_baggy',       price = 5000, count = 50 },
+			{ name = 'xtcbaggy',          price = 5000, count = 50 },
+			{ name = 'coke_brick',        price = 5000, count = 50 },
+			{ name = 'weed_brick',        price = 5000, count = 50 },
+			{ name = 'coke_small_brick',  price = 5000, count = 50 },
+			{ name = 'oxy',               price = 5000, count = 50 },
+			{ name = 'meth',              price = 5000, count = 50 },
+			{ name = 'weed_whitewidow',   price = 5000, count = 50 },
+			{ name = 'weed_skunk',        price = 5000, count = 50 },
+			{ name = 'weed_purplehaze',   price = 5000, count = 50 },
+			{ name = 'weed_ogkush',       price = 5000, count = 50 },
+			{ name = 'weed_amnesia',      price = 5000, count = 50 },
+			{ name = 'weed_ak47',         price = 5000, count = 50 },
+			{ name = 'markedbills',       price = 5000, count = 50 },
+			{ name = 'black_money', 	  price = 5000, count = 50 },
+			{ name = 'syphoningkit',      price = 5000, count = 50 },
+		},
+		locations = {
+			vector3(-594.7032, -1616.3647, 33.0105),
+			vector3(-1312.17, -3402.64, 13.94),
+		},
+		targets = {
+			{ ped = `a_m_y_smartcaspat_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vector3(-594.7032, -1616.3647, 32.0105), heading = 170.6846 },
+			{ ped = `g_f_y_vagos_01`, scenario = 'WORLD_HUMAN_SMOKING_POT', loc = vector3(-1312.17, -3402.64, 12.94), heading = 278.07 },
+		},
+	},
+
 	VendingMachineDrinks = {
 		name = 'Vending Machine',
 		inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = 'water',        price = 10 },
+			{ name = 'sprunk',       price = 10 },
+			{ name = 'kurkakola',    price = 12 },
+			{ name = 'energy_drink', price = 12 },
 		},
 		model = {
 			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
 		}
-	}
+	},
+
+	WeedShop = {
+		name = 'Weed Shop',
+		blip = {
+			id = 140,
+			colour = 52,
+			scale = 0.9,
+		},
+		inventory = {
+			{ name = 'joint',          price = 10,  count = 50 },
+			{ name = 'WEAPON_POOLCUE', price = 100, count = 50 },
+			{ name = 'weed_nutrition', price = 20,  count = 50 },
+			{ name = 'empty_weed_bag', price = 5,   count = 1000 },
+			{ name = 'rolling_paper',  price = 5,   count = 1000 },
+			{ name = 'lighter',        price = 5,   count = 50 },
+		},
+		locations = {
+			vector3(-1168.26, -1573.2, 4.66),
+			vector3(158.38, -221.01, 54.28),
+		},
+		targets = {
+			{ ped = `a_m_y_hippy_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vector3(-1168.26, -1573.2, 3.66), heading = 105.24 },
+			{ ped = `a_m_y_hippy_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vector3(158.38, -221.01, 53.28),  heading = 161.11 },
+		},
+	},
+
+	GearShop = {
+		name = 'Sea Word',
+		blip = {
+			id = 410,
+			colour = 38,
+			scale = 0.9,
+		},
+		inventory = {
+			{ name = 'diving_fill', price = 500,  count = 50 },
+			{ name = 'diving_gear', price = 2500, count = 50 },
+			{ name = 'jerrycan',    price = 200,  count = 50 },
+			{ name = 'camera',      price = 1000, count = 50 },
+			{ name = 'binoculars',  price = 50,   count = 50 },
+			{ name = 'fishingrod',  price = 200,  count = 50 },
+			{ name = 'fishbait',    price = 10,   count = 500 },
+		},
+		locations = {
+			vector3(-1687.03, -1072.18, 13.15)
+		},
+		targets = {
+			{ ped = `s_f_y_baywatch_01`, scenario = 'WORLD_HUMAN_STAND_IMPATIENT', loc = vector3(-1687.03, -1072.18, 12.15), heading = 52.93 },
+		},
+	},
+
+	LeisureShop = {
+		name = 'Leisure Shop',
+		blip = {
+			id = 374,
+			colour = 38,
+			scale = 0.9,
+		},
+		inventory = {
+			{ name = 'parachute',   price = 2500, count = 50 },
+			{ name = 'binoculars',  price = 50,   count = 50 },
+			{ name = 'diving_fill', price = 500,  count = 50 },
+			{ name = 'diving_gear', price = 2500, count = 50 },
+			{ name = 'camera',      price = 1000, count = 50 },
+			{ name = 'backpack',    price = 100,  count = 50 },
+			{ name = 'fishingrod',  price = 200,  count = 50 },
+			{ name = 'fishbait',    price = 10,   count = 500 },
+			{ name = 'pickaxe',     price = 200,  count = 50 },
+		},
+		locations = {
+			vector3(-1505.91, 1511.95, 115.29),
+		},
+		targets = {
+			{ ped = `a_f_y_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE', loc = vector3(-1505.91, 1511.95, 114.29), heading = 257.13 },
+		},
+	},
+
+	DigitalDen = {
+		name = 'Digital Den',
+		blip = {
+
+		},
+		inventory = {
+			{ name = 'phone',     price = 850,  count = 50 },
+			{ name = 'tablet',    price = 950,  count = 50 },
+			{ name = 'radio',     price = 250,  count = 50 },
+			{ name = 'radiocell', price = 50,   count = 50 },
+			-- { name = 'camera',    price = 1000, count = 50 },
+			-- { name = 'stereo',    price = 1000, count = 50 },
+		},
+		locations = {
+			vector3(-17.71, -94.41, 57.03),
+		},
+		targets = {
+			{ ped = `a_m_y_beachvesp_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE', loc = vector3(-17.71, -94.41, 56.03), heading = 163.21 },
+		},
+	},
+
+	-- PRISON (CANTEEN SHOP)
+
+	Mechanic = {
+		name = 'Mechanic',
+		blip = {
+			id = 402,
+			colour = 80,
+			scale = 0.9,
+		},
+		groups = {
+			['mechanic'] = 0, -- LS Customs
+			['mechanic2'] = 0, -- LS Customs
+			['mechanic3'] = 0, -- LS Customs
+			['beeker'] = 0, -- Beeker
+			['bennys'] = 0, -- Benny's
+		},
+		inventory = {
+			-- { name = 'veh_toolbox',       price = 500, count = 50 },
+			-- { name = 'veh_armor',         price = 500, count = 50 },
+			-- { name = 'veh_brakes',        price = 500, count = 50 },
+			-- { name = 'veh_engine',        price = 500, count = 50 },
+			-- { name = 'veh_suspension',    price = 500, count = 50 },
+			-- { name = 'veh_transmission',  price = 500, count = 50 },
+			-- { name = 'veh_turbo',         price = 500, count = 50 },
+			-- { name = 'veh_interior',      price = 500, count = 50 },
+			-- { name = 'veh_exterior',      price = 500, count = 50 },
+			-- { name = 'veh_wheels',        price = 500, count = 50 },
+			-- { name = 'veh_neons',         price = 500, count = 50 },
+			-- { name = 'veh_xenons',        price = 500, count = 50 },
+			-- { name = 'veh_tint',          price = 500, count = 50 },
+			-- { name = 'veh_plates',        price = 500, count = 50 },
+			-- { name = 'nitrous',           price = 500, count = 50 },
+			-- { name = 'tunerlaptop',       price = 500, count = 50 },
+			-- { name = 'repairkit',         price = 500, count = 50 },
+			-- { name = 'advancedrepairkit', price = 500, count = 50 },
+			-- { name = 'tirerepairkit',     price = 500, count = 50 },
+			-- { name = 'harness', 		     price = 500, count = 50 },
+
+			-- JG Mechanic
+			{ name = 'engine_oil',           price = 500, count = 500 }, -- Servicing
+			{ name = 'tyre_replacement',     price = 500, count = 500 }, -- Servicing
+			{ name = 'clutch_replacement',   price = 500, count = 500 }, -- Servicing
+			{ name = 'air_filter',           price = 500, count = 500 }, -- Servicing
+			{ name = 'spark_plug',           price = 500, count = 500 }, -- Servicing
+			{ name = 'suspension_parts',     price = 500, count = 500 }, -- Servicing
+			{ name = 'brakepad_replacement', price = 500, count = 500 }, -- Servicing
+			{ name = 'i4_engine',            price = 500, count = 500 }, -- Engine Swap
+			{ name = 'v6_engine',            price = 500, count = 500 }, -- Engine Swap
+			{ name = 'v8_engine',            price = 500, count = 500 }, -- Engine Swap
+			{ name = 'v12_engine',           price = 500, count = 500 }, -- Engine Swap
+			{ name = 'turbocharger',         price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'ev_motor',             price = 500, count = 500 }, -- Servicing
+			{ name = 'ev_battery',           price = 500, count = 500 }, -- Servicing
+			{ name = 'ev_coolant',           price = 500, count = 500 }, -- Servicing
+			{ name = 'awd_drivetrain',       price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'rwd_drivetrain',       price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'fwd_drivetrain',       price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'slick_tyres',          price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'semi_slick_tyres',     price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'offroad_tyres',        price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'ceramic_brakes',       price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'drift_tuning_kit',     price = 500, count = 500 }, -- Custom Tuning Parts
+			{ name = 'lighting_controller',  price = 500, count = 500 }, -- Useable Item + Applying For Orders
+			{ name = 'stancing_kit',         price = 500, count = 500 }, -- Useable Item + Applying For Orders
+			{ name = 'cosmetic_part',        price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'respray_kit',          price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'vehicle_wheels',       price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'tyre_smoke_kit',       price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'bulletproof_tyres',    price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'extras_kit',           price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'nitrous_bottle',       price = 500, count = 500 }, -- NOS Refill
+			{ name = 'nitrous_install_kit',  price = 500, count = 500 }, -- NOS Installation
+			{ name = 'cleaning_kit',         price = 500, count = 500 }, -- Useable Item
+			{ name = 'repair_kit',           price = 500, count = 500 }, -- Useable Item
+			{ name = 'duct_tape',            price = 500, count = 500 }, -- Useable Item
+			{ name = 'performance_part',     price = 500, count = 500 }, -- Applying For Orders
+			{ name = 'mechanic_tablet',      price = 500, count = 500 }, -- Useable Item + Mechanic Job
+
+			{ name = 'harness',              price = 500, count = 500 },
+			{ name = 'removal_tool',         price = 500, count = 500 },
+
+		},
+		locations = {
+			vector3(-343.66, -140.78, 39.02), -- LSC
+			vector3(1189.36, 2641.00, 38.44), -- LSC
+			vector3(-1156.56, -1999.85, 13.19), -- LSC
+			vector3(-195.80, -1318.24, 31.08), -- Benny's
+			vector3(100.92, 6616.00, 32.47), -- Beeker
+		},
+		targets = {
+			{ ped = `s_m_m_autoshop_01`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(-347.27, -133.43, 38.01),  heading = 243.72 },
+			{ ped = `s_m_m_autoshop_01`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(1171.5, 2637.23, 36.81),   heading = 266.84 },
+			{ ped = `s_m_m_autoshop_01`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(-1148.4, -1999.78, 12.18), heading = 135.79 },
+			{ ped = `s_m_m_autoshop_02`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(-201.85, -1314.46, 30.09), heading = 182.51 },
+			{ ped = `s_m_m_autoshop_02`, scenario = 'WORLD_HUMAN_CLIPBOARD_FACILITY', loc = vector3(110.97, 6631.03, 30.79),   heading = 134.4 },
+		},
+	},
+
+	-- BurgerShot = {
+	-- 	name = 'BurgerShot',
+	-- 	blip = {
+
+	-- 	},
+	-- 	inventory = {
+	-- 		{ name = 'burger-bleeder',      price = 400, count = 100 },
+	-- 		{ name = 'burger-moneyshot',    price = 500, count = 100 },
+	-- 		{ name = 'burger-torpedo',      price = 400, count = 100 },
+	-- 		{ name = 'burger-heartstopper', price = 850, count = 100 },
+	-- 		{ name = 'burger-meatfree',     price = 500, count = 100 },
+	-- 		{ name = 'burger-baconcheese',  price = 400, count = 100 },
+	-- 		{ name = 'burger-chickenwrap',  price = 400, count = 100 },
+	-- 		{ name = 'burger-fries',        price = 75,  count = 100 },
+	-- 		{ name = 'burger-onionrings',   price = 75,  count = 100 },
+	-- 		{ name = 'burger-softdrink',    price = 75,  count = 100 },
+	-- 		{ name = 'burger-mshake',       price = 100, count = 100 },
+	-- 		{ name = 'burger-coffee',       price = 75,  count = 100 },
+	-- 	},
+	-- 	locations ={
+	-- 		vector3(-1187.45, -886.79, 13.89),
+	-- 	},
+	-- 	targets = {
+	-- 		{ loc = vector3(-1187.84, -886.39, 13.89), length = 0.9, width = 4.35, heading = 34, minZ = 12.89, maxZ = 15.59, distance = 3.0 },
+	-- 	},
+	-- },
 }
