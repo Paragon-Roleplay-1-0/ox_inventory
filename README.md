@@ -21,6 +21,7 @@ We do not guarantee compatibility or support for third-party resources.
 
 - [ox_core](https://github.com/overextended/ox_core)
 - [esx](https://github.com/esx-framework/esx_core)
+- [qb-core](https://github.com/qbcore-framework/qb-core) (LIMITED SUPPORT! Use qbox instead)
 - [qbox](https://github.com/Qbox-project/qbx_core)
 - [nd_core](https://github.com/ND-Framework/ND_Core)
 
@@ -56,7 +57,7 @@ We do not guarantee compatibility or support for third-party resources.
 
 ## Copyright
 
-Copyright © 2024 Overextended <https://github.com/overextended>
+Copyright © 2025 Overextended <https://github.com/overextended>
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
